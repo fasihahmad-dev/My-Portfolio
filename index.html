@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="left">Muhammad Fasih Ahmad</div>
+
+      <div class="right">
+        <a href="https://github.com/fasihahmad-dev" target="_blank"> Github </a>
+        <i class="fa-brands fa-github"></i>
+
+        <a
+          href="https://www.linkedin.com/in/fasih-ahmad-7222aa24b/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+        <i class="fa-brands fa-linkedin"></i>
+
+        <!-- Email Button (Popup Trigger) -->
+        <a href="javascript:void(0)" class="email-btn" onclick="openPopup()">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Section 1 Hero -->
+      <section class="hero-section">
+        <div class="text">
+          <h2>Hi, I'm Fasih Ahmad 👋</h2>
+          <p>
+            A Software Engineer and Web Developer passionate about building
+            creative and efficient digital solutions. With expertise in C, C++,
+            Java, JavaScript, HTML, CSS, and the MERN Stack, I develop
+            user-friendly and scalable applications. I focus on writing clean,
+            optimized code while delivering modern and practical designs. From
+            simple websites to full-stack projects, I enjoy turning ideas into
+            reality. My approach combines problem-solving, creativity, and
+            technical expertise to achieve the best results. I aim to create
+            solutions that not only meet client needs but also exceed
+            expectations.
+          </p>
+          <div class="links">
+            <a href="#skills">
+              <i class="fa-solid fa-code"></i>
+              <span>Skills</span>
+            </a>
+
+            <a href="#testimony">
+              <i class="fa-solid fa-pen-fancy"></i>
+              <span>Testimony</span>
+            </a>
+            <a href="#contact " >
+              <i class="fa-solid fa-envelope"></i>
+              <span >Contact</span>
+            </a>
+          </div>
+        </div>
+        <div class="headshot">
+          <img src="./images/Me.png" alt="" />
+        </div>
+      </section>
+
+      <!-- Section 2 Skills -->
+      <section id="skills" class="skill-section">
+  <div class="text">
+    <h2>Skills</h2>
+    <p>
+      I specialize in building modern and scalable web applications using
+      MERN Stack, Java, C/C++, and JavaScript. My focus is on writing
+      clean, optimized code while creating designs that are user-friendly
+      and efficient.
+    </p>
+  </div>
+
+  <div class="cells">
+    <div class="cell">
+      <img src="./images/317755_badge_html_html5_achievement_award_icon.png" alt="html logo">
+      <span>HTML</span>
+    </div>
+    <div  class="cell">
+      <img src="./images/317756_badge_css_css3_achievement_award_icon.png" alt="css logo">
+      <span>Css</span>
+    </div>
+    <div class="cell">
+      <img src="./images/4373213_js_logo_logos_icon.png" alt="js logo">
+      <span>JavaScript</span>
+    </div>
+    <div class="cell">
+      <img src="./images/1174949_js_react js_logo_react_react native_icon.png" alt="">
+      <span>React</span>
+    </div>
+  </div>
+</section>
+
+      </section>
+
+      <!-- Section 3 Testimony -->
+      <section id="testimony" class="testimony-section">
+        <h2>Testimony</h2>
+
+        <div class="group">
+  <div class="person-details">
+    <img src="./images/premium_photo-1664476788423-7899ac87bd7f.avif" alt="client-picture">
+    <p>John Joe</p>
+    <p>
+      <i class="fa-solid fa-briefcase" style="color:#1dbf73;"></i> Fiverr Client
+    </p>
+  </div>
+
+  <div class="text">
+    <p>"Fasih did an OUTSTANDING job! The attention to detail and professionalism in his work truly exceeded expectations, and his quick responses made the entire process smooth and efficient 🙌. Highly recommend working with him! "</p>
+  </div>
+</div>
+
+      </section>
+
+      <!-- Section 4 Contact Us -->
+      <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <div class="group">
+          <div class="text">“I’d love to hear from you! Whether you have a project in mind, a collaboration idea, or just want to connect, feel free to reach out. I’m always open to discussing new opportunities and bringing creative solutions to life. Drop me a message and I’ll get back to you as soon as possible.”</div>
+        </div>
+<form >
+      <label for="name">Name :</label>
+        <input type="text" name="name" id="name">
+      
+        <label for="email">Email :</label>
+        <input type="text" name="email" id="email">
+        <label for="message">Message</label>
+        <textarea name="text" id="message" cols="30" rows="10"></textarea>
+        <button class="submit">Send Message</button>
+    </form>
+
+      </section>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup" id="popup">
+      <h3>My Email</h3>
+      <p><i class="fa-solid fa-envelope"></i> : fasihahmad447@gmail.com</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      }
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+      }
+  // Scroll trigger for skill section
+  window.addEventListener("scroll", function () {
+    const skillSection = document.querySelector(".skill-section");
+    const sectionTop = skillSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight - 100; // adjust sensitivity
+
+    if (sectionTop < triggerPoint) {
+      skillSection.classList.add("show");
+    }
+  });
+  // Scroll trigger for testimony section
+window.addEventListener("scroll", function () {
+  const testimonySection = document.querySelector(".testimony-section");
+  const sectionTop = testimonySection.getBoundingClientRect().top;
+  const triggerPoint = window.innerHeight - 100;
+
+  if (sectionTop < triggerPoint) {
+    testimonySection.classList.add("show");
+  }
+});
+
+
+    </script>
+  </body>
+</html>
